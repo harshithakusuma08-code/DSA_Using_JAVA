@@ -8,6 +8,14 @@ class Solution{
         printNumbers(count+1,n);
 
     }
+    public void printNumbersReverse(int count,int n){
+        if(count==0){
+            return;
+        }
+        System.out.println(count);
+        printNumbersReverse(count-1,n);
+
+    }
 }
 public class printNnumbers{
     public static void main(String[]args){
@@ -17,6 +25,8 @@ public class printNnumbers{
         int count=1;
         Solution s=new Solution();
         s.printNumbers(count,n);
+        System.out.println("Numbers in reverse order:");
+        s.printNumbersReverse(n,n);
 
 
     }
